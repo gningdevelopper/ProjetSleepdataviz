@@ -1,0 +1,12 @@
+body {
+    background-image: url(/background.jpg);
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-size: auto;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 20%;
+}
