@@ -121,7 +121,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
           "translate(" + (width / 2) + " ," +
           (height + margin.top + 20) + ")")
         .style("text-anchor", "middle")
-        .style("color", "whitesmoke")
+        .style("fill", "white")
         .text("Date");
 
       // Add the y Axis
@@ -135,7 +135,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .attr("x", 0 - (height / 2))
         .attr("dy", "1em")
         .style("text-anchor", "middle")
-        .style("color", "whitesmoke!important")
+        .style("fill", "white")
         .text("Temps de sommeil");
 
     })
