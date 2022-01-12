@@ -8,6 +8,7 @@
 body {
     background-color: #0A1929!important;
     font-family: 'Ubuntu', sans-serif!important;
+    padding: 2%;
 }
 
 #line_chart_area {
@@ -37,7 +38,7 @@ h1 {
 .row {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .table {
