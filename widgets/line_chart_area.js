@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 const margin = { top: 10, right: 30, bottom: 30, left: 60 },
-  width = 760 - margin.left - margin.right,
-  height = 600 - margin.top - margin.bottom;
+  width = 1060 - margin.left - margin.right,
+  height = 1000 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#line_chart_area")
@@ -11,16 +11,31 @@ const svg = d3.select("#line_chart_area")
   .append("g")
   .attr("transform", `translate(${margin.left},${margin.top})`);
 
-d3.csv("/data/clean_sleep_data.csv", d => {
-  console.log(d)
-})
+// d3.csv("/data/clean_sleep_data.csv", d => {
+//   let date = d.From.replaceAll(".", "").split(" ")
+//   date = new Date(date[2], date[1], date[0], date[3].split(":")[0], date[3].split(":")[1])
+//   let value = d.Hours
+//   console.log(date)
+
+//   // console.log(d3.timeParse("%d %m %Y %h:%mm")(d.date))
+
+// })
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+// d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+d3.csv("../data/clean_sleep_data.csv",
 
   // When reading the csv, I must format variables:
   d => {
-    return { date: d3.timeParse("%Y-%m-%d")(d.date), value: d.value }
+    // console.log(d3.timeParse("%Y-%m-%d")(d.date))
+
+    let date = d.From.replaceAll(".", "").split(" ")
+    date = new Date(date[2], date[1], date[0], date[3].split(":")[0], date[3].split(":")[1])
+    let value = d.Hours
+    console.log(date)
+
+    return { date, value }
+    // return { date: d3.timeParse("%Y-%m-%d")(d.date), value: d.value }
   }).then(
 
     // Now I can use this dataset:
