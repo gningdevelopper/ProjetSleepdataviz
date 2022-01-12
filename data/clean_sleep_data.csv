@@ -1,4 +1,4 @@
-Id,Tz,From,To,Sched,Hours,Rating,Comment,Framerate,Snore,Noise,Cycles,DeepSleep,LenAdjust
+,Id,Tz,From,To,Sched,Hours,Rating,Comment,Framerate,Snore,Noise,Cycles,DeepSleep,LenAdjust
 1,1637632636976,Europe/Paris,23. 11. 2021 2:57,23. 11. 2021 5:48,23. 11. 2021 5:45,2.850,0.0,University (Morning Lectures),10007,-1,-1.0,2,0.6571429,0
 3,1637542110804,Europe/Paris,22. 11. 2021 1:48,22. 11. 2021 5:47,22. 11. 2021 5:45,3.980,0.0,University (Morning Lectures),10007,-1,-1.0,5,0.7708333,-1
 5,1637456793915,Europe/Paris,21. 11. 2021 2:06,21. 11. 2021 8:51,21. 11. 2021 8:30,6.750,0.0,,10007,-1,-1.0,7,0.75609756,-2
