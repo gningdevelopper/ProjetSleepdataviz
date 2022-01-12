@@ -20,7 +20,7 @@ h1 {
     text-align: center;
 }
 
-/* lottie-player#main_logo{
+/* lottie-player.main_logo{
     margin-left: 35%;
 } */
 
@@ -51,4 +51,12 @@ thead tr {
 
 tr:hover {
     background-color: rgba(245, 245, 245, 0.295)!important;
+}
+
+.circular_viz_moon {
+    margin-bottom: -20%;
+}
+
+.circular_viz_sun {
+    margin-top: -18.5%;
 }

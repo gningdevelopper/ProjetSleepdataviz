@@ -25,9 +25,36 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-    <div class="col">
-        <lottie-player id="main_logo" src="https://assets2.lottiefiles.com/private_files/lf30_em0dkba6.json"
-            background="transparent" speed="1.3" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    <div class="row">
+        <div class="col">
+            <lottie-player class="main_logo" src="https://assets2.lottiefiles.com/private_files/lf30_em0dkba6.json"
+                background="transparent" speed="1.3" style="wclassth: 300px; height: 300px;" loop autoplay>
+            </lottie-player>
+        </div>
+
+        <div class="col">
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_iCyT2Z.json" background="transparent"
+                speed="1.3" style="width: 200px; height: 200px;" loop autoplay>
+            </lottie-player>
+        </div>
+
+        <div class="col">
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_7ir2eqwg.json" background="transparent"
+                speed="1.3" style="width: 300px; height: 300px;" loop autoplay>
+            </lottie-player>
+        </div>
+
+        <div class="col">
+            <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_rsattbhn.json"
+                background="transparent" speed="0.6" style="width: 200px; height: 200px;" loop autoplay>
+            </lottie-player>
+        </div>
+
+        <div class="col">
+            <lottie-player class="main_logo" src="https://assets2.lottiefiles.com/private_files/lf30_em0dkba6.json"
+                background="transparent" speed="1.3" style="width: 300px; height: 300px;" loop autoplay>
+            </lottie-player>
+        </div>
     </div>
 
     <div class="row">
@@ -75,9 +102,56 @@
             <h4 class="line_chart_area_title">Qualité du sommeil dans le temps</h4>
             <br>
             <div id="line_chart_area"></div>
-
         </div>
+
+
         <div class="col">
+            <!-- ---------------------------- -->
+
+            <div>
+                <div style="text-align: center;">
+                    <label for="">Year</label>
+                    <select id="year" style="text-align:center;">
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+                <div style="text-align: center;">
+                    <label for="">Period</label>
+                    <select id="period" style="text-align:center;">
+                        <option value="month">month</option>
+                        <option value="weeks">weeks</option>
+                        <option value="trimester">trimester</option>
+                    </select>
+                </div>
+                <div style="text-align: center;">
+                    <label for="">Evenement</label>
+                    <select id="event" style="text-align:center;">
+                        <option value="examen">Examen</option>
+                        <option value="vacancescolaire">Vacances Scolaire</option>
+                        <option value="fetes">Fêtes</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="line_chart_area_title">Durée moyenne de sommeil par periode </h4>
+
+            <lottie-player class="circular_viz_moon" src="https://assets10.lottiefiles.com/packages/lf20_7ir2eqwg.json"
+                background="transparent" speed="1.6" style="width: 150px; height: 150px;" loop autoplay>
+            </lottie-player>
+
+            <div id="circular_viz">
+            </div>
+
+            <lottie-player class="circular_viz_sun" src="https://assets3.lottiefiles.com/private_files/lf30_rsattbhn.json"
+                background="transparent" speed="0.6" style="width: 146px; height: 146;" loop autoplay>
+            </lottie-player>
+ 
+        </div>
+
+        <div class="row">
             <h4 class="line_chart_area_title">Evènements pouvant affecter le sommeil</h4>
             <br>
             <table class="table table-bordered table-hover table-condensed">
@@ -146,44 +220,6 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-
-    <!-- ---------------------------- -->
-    <div>
-        <div style="text-align: center;">
-            <label for="">Year</label>
-            <select id="year" style="text-align:center;">
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-            </select>
-        </div>
-        <div style="text-align: center;">
-            <label for="">Period</label>
-            <select id="period" style="text-align:center;">
-                <option value="month">month</option>
-                <option value="weeks">weeks</option>
-                <option value="trimester">trimester</option>
-            </select>
-        </div>
-        <div style="text-align: center;">
-            <label for="">Evenement</label>
-            <select id="event" style="text-align:center;">
-                <option value="examen">Examen</option>
-                <option value="vacancescolaire">Vacances Scolaire</option>
-                <option value="fetes">Fêtes</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <h4 class="line_chart_area_title">Durée moyenne de sommeil par periode </h4>
-            <div id="circular_viz">
-
-            </div>
         </div>
     </div>
 
