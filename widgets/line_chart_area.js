@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 const margin = { top: 10, right: 30, bottom: 30, left: 60 },
-  width = 460 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
+  width = 660 - margin.left - margin.right,
+  height = 600 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#line_chart_area")
@@ -67,7 +67,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .attr("class", "myArea")  // I add the class myArea to be able to modify it later on.
         .attr("fill", "#69b3a2")
         .attr("fill-opacity", .3)
-        .attr("stroke", "black")
+        .attr("stroke", "white")
         .attr("stroke-width", 1)
         .attr("d", areaGenerator)
 
