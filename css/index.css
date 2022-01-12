@@ -44,3 +44,11 @@ h1 {
 .table {
     color: whitesmoke!important;
 }
+
+thead tr {
+    background-color: rgba(245, 245, 245, 0.295)!important;
+}
+
+tr:hover {
+    background-color: rgba(245, 245, 245, 0.295)!important;
+}
