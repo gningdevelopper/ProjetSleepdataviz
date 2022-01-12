@@ -1,12 +1,35 @@
-body {
+/* body {
     background-image: url(/background.jpg);
     background-position: center;  
     background-repeat: no-repeat;  
     background-size: auto;
+} */
+
+body {
+    background-color: #0A1929;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#line_chart_area {
+    color: whitesmoke;
 }
 
 h1 {
     color: aliceblue;
     text-align: center;
-    margin-top: 20%;
+}
+
+lottie-player#main_logo{
+    margin-left: 35%;
+}
+
+.line_chart_area_title {
+    color: whitesmoke;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
