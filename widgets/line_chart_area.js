@@ -1,4 +1,6 @@
+import { formatDate } from "../utils/utils.js";
 // set the dimensions and margins of the graph
+
 const margin = { top: 10, right: 30, bottom: 30, left: 60 },
   width = 960 - margin.left - margin.right,
   height = 900 - margin.top - margin.bottom;
@@ -29,8 +31,9 @@ d3.csv("https://raw.githubusercontent.com/gningdevelopper/ProjetSleepdataviz/mai
   d => {
     // console.log(d3.timeParse("%Y-%m-%d")(d.date))
 
-    let date = d.From.replaceAll(".", "").split(" ")
-    date = new Date(date[2], date[1], date[0], date[3].split(":")[0], date[3].split(":")[1])
+    // let date = d.From.replaceAll(".", "").split(" ")
+    // date = new Date(date[2], date[1], date[0], date[3].split(":")[0], date[3].split(":")[1])
+    let date = formatDate(d.From)
     let value = d.Hours
     //console.log(date)
 
