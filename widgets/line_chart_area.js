@@ -32,7 +32,7 @@ d3.csv("https://raw.githubusercontent.com/gningdevelopper/ProjetSleepdataviz/mai
     let date = d.From.replaceAll(".", "").split(" ")
     date = new Date(date[2], date[1], date[0], date[3].split(":")[0], date[3].split(":")[1])
     let value = d.Hours
-    console.log(date)
+    //console.log(date)
 
     return { date, value }
     // return { date: d3.timeParse("%Y-%m-%d")(d.date), value: d.value }
