@@ -34,10 +34,49 @@
         </div>
     </div>
 
+    <!-- ---------------------------- -->
+    <div>
+        <div style="text-align: center;">
+            <label for="">Year</label>
+            <select id="year" style="text-align:center;">
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+            </select>
+        </div>
+        <div style="text-align: center;">
+            <label for="">Period</label>
+            <select id="period" style="text-align:center;">
+              <option value="month">month</option>
+              <option value="weeks">weeks</option>
+              <option value="trimester">trimester</option>
+            </select>
+        </div>
+        <div style="text-align: center;">
+            <label for="">Evenement</label>
+            <select id="event" style="text-align:center;">
+              <option value="examen">Examen</option>
+              <option value="vacancescolaire">Vacances Scolaire</option>
+              <option value="fetes">Fêtes</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4 class="line_chart_area_title">Durée moyenne de sommeil par periode </h4>
+            <div id="circular_viz">
+                
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- <img class="background" src="./background.jpg" alt="" width="100%" height="100%"> -->
 
     <script src="widgets/line_chart_area.js"></script>
+    <script src="widgets/circular_viz.js"></script>
 </body>
 
 </html>
