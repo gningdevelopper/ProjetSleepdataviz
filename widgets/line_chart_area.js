@@ -23,7 +23,7 @@ const svg = d3.select("#line_chart_area")
 
 //Read the data
 // d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
-d3.csv("https://github.com/gningdevelopper/ProjetSleepdataviz/blob/eb1ae0249d943c96065a60d64e89dc2a32bf1d76/data/clean_sleep_data.csv",
+d3.csv("https://raw.githubusercontent.com/gningdevelopper/ProjetSleepdataviz/main/data/clean_sleep_data.csv",
 
   // When reading the csv, I must format variables:
   d => {
