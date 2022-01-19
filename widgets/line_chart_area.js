@@ -18,10 +18,6 @@ const svg = d3.select("#line_chart_area")
   .append("g")
   .attr("transform", `translate(${margin.left},${margin.top})`);
 
-const formatDate = (initialDate) => {
-  let date = initialDate.replaceAll(".", "").split(" ")
-  return date = new Date(date[2], date[1], date[0], date[3].split(":")[0], date[3].split(":")[1])
-}
 
 export const drawChart = (d) => {
 
@@ -122,6 +118,10 @@ export const drawChart = (d) => {
       x.domain([x.invert(extent[0]), x.invert(extent[1])])
       area.select(".brush").call(brush.move, null) // This remove the grey brush area as soon as the selection has been done
       console.log([x.invert(extent[0]), x.invert(extent[1])])
+
+      // newData = data.filter(d => d.date >= x.invert(extent[0] && d.date <= x.invert(extent[1])))
+      // rangeSlider.data(newData)
+      
     }
 
     // Update axis and area position
@@ -131,6 +131,10 @@ export const drawChart = (d) => {
       .transition()
       .duration(1000)
       .attr("d", areaGenerator)
+
+    // console.log(xAxis)
+    // console.log(x.domain)
+    // console.log(diaf)
   }
 
   // If user double click, reinitialize the chart

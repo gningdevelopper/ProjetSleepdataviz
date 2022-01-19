@@ -174,7 +174,7 @@
         <div class="row">
             <h4 class="line_chart_area_title">Evènements pouvant affecter le sommeil</h4>
             <br>
-            <table class="table table-bordered table-hover table-condensed">
+            <table id="data-table" class="table table-bordered table-hover table-condensed">
                 <thead>
                     <tr>
                         <th title="Field #1">DateDebut</th>
@@ -251,6 +251,12 @@
         const margin = { top: 10, right: 30, bottom: 30, left: 60 },
             width = 960 - margin.left - margin.right,
             height = 900 - margin.top - margin.bottom;
+        var newData, rangeSlider;
+
+        const formatDate = (initialDate) => {
+            let date = initialDate.replaceAll(".", "").split(" ")
+            return date = new Date(date[2], date[1], date[0], date[3].split(":")[0], date[3].split(":")[1])
+        }
     </script>
     <script type="module" src="widgets/line_chart_area.js"></script>
     <script src="widgets/circular_viz.js"></script>

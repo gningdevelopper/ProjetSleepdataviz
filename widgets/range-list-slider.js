@@ -6,9 +6,10 @@ import { drawChart } from "./line_chart_area.js";
 console.log(d3.version)
 
 d3.csv("https://raw.githubusercontent.com/gningdevelopper/ProjetSleepdataviz/main/data/clean_sleep_data.csv").then(data => {
-    drawChart(data)
 
-    new RangeSlider()
+    drawChart(data);
+
+    rangeSlider = new RangeSlider()
         .container("#range-slider")
         .data(data)
         .accessor(d => {
@@ -23,13 +24,16 @@ d3.csv("https://raw.githubusercontent.com/gningdevelopper/ProjetSleepdataviz/mai
                     `Qualité du sommeil dans le temps entre le 
                     ${d.range[0].toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })} et le
                     ${d.range[1].toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })}`)
-            d3.select('.data').html(`selected data length - ` + d.data.length)
             console.log(d)
 
             drawChart(d.data)
+
+            console.log(rangeSlider.getChartState())
         })
         .svgWidth(900)
         .svgHeight(100)
-        .render()
 
+    rangeSlider.render()
+
+    // console.log(newData)
 })
