@@ -30,8 +30,8 @@ d3.select("#data-table").on("click", (e) => {
     d3.selectAll(".hovered-line").classed("hovered-line", false)
     d3.select(e.target.parentElement).classed("hovered-line", d3.select(e.target.parentElement).classed("hovered-line") ? false : true)
 
-    let startDate = d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[0].innerText)
-    let endDate = d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[1].innerText)
+    startDate = d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[0].innerText)
+    endDate = d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[1].innerText)
 
     d3.select('.line_chart_area_title')
         .html(
@@ -42,6 +42,9 @@ d3.select("#data-table").on("click", (e) => {
 
 
     let newData = initialData.filter(d => formatDate(d.From) >= startDate && formatDate(d.From) <= endDate)
+
+    console.log(startDate)
+    console.log(endDate)
 
     drawChart(newData)
 })

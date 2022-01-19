@@ -102,6 +102,7 @@ export const drawChart = (d) => {
     .attr("class", "brush")
     .call(brush);
 
+
   // A function that set idleTimeOut to null
   let idleTimeout
   function idled() { idleTimeout = null; }
@@ -122,7 +123,7 @@ export const drawChart = (d) => {
       console.log([x.invert(extent[0]), x.invert(extent[1])])
 
       d3.select('.line_chart_area_title')
-      .html(
+        .html(
           `Qualité du sommeil dans le temps entre le 
           ${x.invert(extent[0]).toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })} et le
           ${x.invert(extent[1]).toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })}`)

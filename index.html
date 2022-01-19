@@ -83,7 +83,7 @@
                     <h5 class="card-title">Equipe</h5>
                     <p class="card-text">
                         Mouhammad DIAKHATE <br>
-                        David GALY <br>
+                        David DAILY <br>
                         Amadou DEME <br>
                         Ousseynou GNINGUE <br>
                     </p>
@@ -114,48 +114,42 @@
                 <div id="line_chart_area"></div>
             </div>
 
-            <div class="range">
-                selected range : []
-            </div>
-            <div class="data">
-                selected data length - 0
-            </div>
             <div class="row" id="range-slider"></div>
         </div>
 
 
         <div class="col">
             <!-- ---------------------------- -->
+            <h4 class="line_chart_area_title">Durée moyenne de sommeil par periode </h4>
 
             <div>
                 <div style="text-align: center;">
                     <label for="">Année</label>
-                    <select id="year" style="text-align:center;">
-                        <option value="2018">2018</option>
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
+                    <select class="input" id="year" style="text-align:center;">
+                        <option class="input-option" value="2018">2018</option>
+                        <option class="input-option" value="2019">2019</option>
+                        <option class="input-option" value="2020">2020</option>
+                        <option class="input-option" value="2021">2021</option>
                     </select>
                 </div>
                 <div style="text-align: center;">
                     <label for="">Période</label>
-                    <select id="period" style="text-align:center;">
-                        <option value="month">Mois</option>
-                        <option value="weeks">Semaines</option>
-                        <option value="trimester">Trimestre</option>
+                    <select class="input-violet" id="period" style="text-align:center;">
+                        <option class="input-option" value="month">Mois</option>
+                        <option class="input-option" value="weeks">Semaines</option>
+                        <option class="input-option" value="trimester">Trimestre</option>
                     </select>
                 </div>
                 <div style="text-align: center;">
                     <label for="">Evènements</label>
-                    <select id="event" style="text-align:center;">
-                        <option value="examen">Examens</option>
-                        <option value="vacancescolaire">Vacances Scolaires</option>
-                        <option value="fetes">Fêtes</option>
+                    <select class="input" id="event" style="text-align:center;">
+                        <option class="input-option" value="examen">Examens</option>
+                        <option class="input-option" value="vacancescolaire">Vacances Scolaires</option>
+                        <option class="input-option" value="fetes">Fêtes</option>
                     </select>
                 </div>
             </div>
 
-            <h4 class="line_chart_area_title">Durée moyenne de sommeil par periode </h4>
 
             <lottie-player class="circular_viz_moon" src="https://assets10.lottiefiles.com/packages/lf20_7ir2eqwg.json"
                 background="transparent" speed="1.6" style="width: 150px; height: 150px;" loop autoplay>
@@ -188,7 +182,6 @@
             </table>
         </div>
 
-
     </div>
 
     <!-- Scripts -->
@@ -197,7 +190,7 @@
         const margin = { top: 10, right: 30, bottom: 30, left: 60 },
             width = 960 - margin.left - margin.right,
             height = 900 - margin.top - margin.bottom;
-        var newData, rangeSlider, initialData;
+        var newData, rangeSlider, initialData, startDate, endDate;
 
         const formatDate = (initialDate) => {
             let date = initialDate.replaceAll(".", "").split(" ")
