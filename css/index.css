@@ -9,6 +9,7 @@ body {
     background-color: #0A1929!important;
     font-family: 'Ubuntu', sans-serif!important;
     padding: 2%;
+    /* color: whitesmoke!important; */
 }
 
 #line_chart_area {
@@ -47,10 +48,12 @@ h1 {
 
 thead tr {
     background-color: rgba(245, 245, 245, 0.295)!important;
+    color: whitesmoke!important;
 }
 
 tr:hover {
     background-color: rgba(245, 245, 245, 0.295)!important;
+    color: whitesmoke!important;
 }
 
 .circular_viz_moon {
@@ -59,4 +62,16 @@ tr:hover {
 
 .circular_viz_sun {
     margin-top: -18.5%;
+}
+
+label {
+    color: whitesmoke;
+}
+
+#range-slider {
+    align-self: center;
+    border-radius:5px;
+    background-color:#30363E;
+    padding: 15px;
+    width: 100%;
 }
