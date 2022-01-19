@@ -18,6 +18,8 @@ const svg = d3.select("#line_chart_area")
   .append("g")
   .attr("transform", `translate(${margin.left},${margin.top})`);
 
+// svg.transition()
+//   .duration(1000)
 
 export const drawChart = (d) => {
 
@@ -121,7 +123,7 @@ export const drawChart = (d) => {
 
       // newData = data.filter(d => d.date >= x.invert(extent[0] && d.date <= x.invert(extent[1])))
       // rangeSlider.data(newData)
-      
+
     }
 
     // Update axis and area position

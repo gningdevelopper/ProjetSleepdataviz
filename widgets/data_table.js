@@ -3,14 +3,21 @@ import { drawChart } from "./line_chart_area.js";
 
 d3.select("#data-table").on("click", (e) => {
     console.log(e)
+
     d3.selectAll(".hovered-line").classed("hovered-line", false)
     d3.select(e.target.parentElement).classed("hovered-line", d3.select(e.target.parentElement).classed("hovered-line") ? false : true)
-    console.log(d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[0].innerText))
-    console.log(d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[1].innerText))
 
     let startDate = d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[0].innerText)
     let endDate = d3.timeParse("%d/%m/%Y")(e.target.parentElement.children[1].innerText)
 
+    d3.select('.line_chart_area_title')
+                .html(
+                    `Qualité du sommeil dans le temps pendant
+                    ${e.target.parentElement.children[2].innerText}
+                    (du ${startDate.toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })} au
+                    ${endDate.toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })})`)
+
+   
     let newData = initialData.filter(d => formatDate(d.From) >= startDate && formatDate(d.From) <= endDate)
 
     drawChart(newData)
