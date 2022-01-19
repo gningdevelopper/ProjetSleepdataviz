@@ -121,6 +121,12 @@ export const drawChart = (d) => {
       area.select(".brush").call(brush.move, null) // This remove the grey brush area as soon as the selection has been done
       console.log([x.invert(extent[0]), x.invert(extent[1])])
 
+      d3.select('.line_chart_area_title')
+      .html(
+          `Qualité du sommeil dans le temps entre le 
+          ${x.invert(extent[0]).toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })} et le
+          ${x.invert(extent[1]).toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' })}`)
+
       // newData = data.filter(d => d.date >= x.invert(extent[0] && d.date <= x.invert(extent[1])))
       // rangeSlider.data(newData)
 
