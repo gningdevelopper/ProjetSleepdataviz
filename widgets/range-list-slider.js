@@ -9,6 +9,7 @@ d3.csv("https://raw.githubusercontent.com/gningdevelopper/ProjetSleepdataviz/mai
 
     drawChart(data);
 
+    initialData = data;
     rangeSlider = new RangeSlider()
         .container("#range-slider")
         .data(data)
